@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  padding: 64px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+.large-font {
+  font-size: 24px;
+}
+
+.xlarge-font {
+  font-size: 36px
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 28px;
+  font-size: 8px;
+  cursor: pointer;
+  background-color: #EC5408;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1000px) {  /* Bu kısım da responsive design için eklenen medyaları isteneek şekle getirmesi için */
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<!-- Başlangıç -->
+<div class="container">
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>Tranquility Base Hotel & Casino [Album][Alternative/Indie] Wiki Page</b></h1>
+      <h1 class="large-font" style="color:#D8CAA1"><b>Quick Facts About This Space Themed Album</b></h1>
+      <p><span style="font-size:20px">They just wanted to be one of The Strokes... But for now, they are surprising us with a new concept album. As early critiques reveal, this album is a departure from the band's previous guitar-heavy sound.  </span> 
+        <p><span style="font-size:16px">The album was written by the band's frontman Alex Turner in Los Angeles and Paris, with recording taking place in Los Angeles. The album was produced by James Ford and Alex Turner, and was recorded in 2016 to 2017. The album features a lush sound, exploring a variety of styles, including lounge pop, space pop, glam rock, and psychedelic pop. The album's lyrics explore consumerism, politics, religion, technology, and science fiction, and feature a loose concept about a luxury hotel on the moon.</span> 
+           </p>
+        </p>
+      <button class="button">Give Rave Reviews Now!</button> <!-- Bu buton da albume değerlendirme ve oy verilebilmesi için.  -->
+    </div>
+    <div class="column-33">
+      <img src="./images/album.png" alt="My Image">
+       
+    </div>
+  </div>
+</div>
+
+<!-- Bu kısımda albumle ilgili bilgiler veriliyor.  fontlaru yukarıda tanımladım,renkleri de color wheel üzerinden ve album artwork üzeirinden özel Hex kodları ile belirledim. -->
+<div class="container" style="background-color:#D8CAA1">
+    <div class="row">
+      <div class="column-33">
+          <img src="./images/banner2.png" width="335" height="200" style="animation: move 5s ease-in-out infinite;">
+      </div>
+      <div class="column-66">
+        <h1 class="xlarge-font"><b>What is the concept of this album? </b></h1>
+        <h1 class="large-font" style="color:#AD180A"><b>A story that starts with a Steinway Piano...</b></h1>
+        <div id="text-container">
+          <p><span style="font-size:24px">This album came out on 11th May of 2018. </span> Alex Turner wrote Arctic Monkeys’ sixth album in Los Angeles on an upright piano in his spare room. As it took shape, he christened his makeshift studio the Lunar Surface, after the theory that Stanley Kubrick faked the Apollo moon landing on a soundstage. When Turner assembled his bandmates, they were alarmed to find he’d applied this concept literally: Tranquility Base Hotel & Casino is a song suite documenting a futuristic moon colony and the exodus that spawned it, told by an assortment of unreliable narrators who can sometimes barely string a sentence together. After 2013’s wildly successful AM, Turner is now writing lyrics in an entirely new idiom, swapping witty sleaze for absurdist suave.</p>
+          <button class="button" style="background-color:#AD180A" onclick="toggleReadMore()">Read More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function toggleReadMore() {
+      var additionalText = document.getElementById("additional-text");
+      var button = document.querySelector(".button");
+      var textContainer = document.getElementById("text-container");
+      
+      if (additionalText.style.display === "none") {
+        additionalText.style.display = "block";
+        button.textContent = "Read Less";
+        textContainer.style.marginBottom = "20px"; // bu kısımda Js kullanılıyor ama projenin temeli html css. 
+      } else {
+        additionalText.style.display = "none";
+        button.textContent = "Read More";
+        textContainer.style.marginBottom = "0"; // ama fonksiyonelliği henüz eklemedim. 
+      }
+    }
+  </script>
+  
+  
+<!-- Albüm şarkı listesini embedded spotify listesi olarak ekledim. fotoğrefları da localden ya da online olarak çektim. -->
+<div class="container" style="background-color:#D8CAA1"></div>
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>The Tracklist</b></h1>
+      <h1><iframe style="border-radius:36px" src="https://open.spotify.com/embed/album/7v6FNgLDS8KmaWA1amUtqe?utm_source=generator" width="100%" height="372" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></h1>
+      
+    </div>
+    <div class="column-33">
+     
+        <img src= "https://m.media-amazon.com/images/I/812TneS2smL._UF1000,1000_QL80_.jpg" alt="m.media-amazon.com"  width="100%" height="2000">
+    </div>
+  </div>
+</div>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+.column {
+  float: left;
+  width: 100%;
+  padding: 10px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+
+
+<br>
+<h1 class="xlarge-font"><b>Song Interpretations of TBH&C</b></h1>
+<div class="row">
+  <div class="column" style="background-color:#f18752;">
+    <h2>Star Treatment</h2>
+    <p>The album’s first line, “I just wanted to be one of the Strokes,” definitely grabs the listener’s attention.
+      Alex Turner: When I wrote that line, I imagined I would return to it, and it wouldn’t end up on the record. But when I circled back around to it I felt like it was right where it ought to be because of how it makes me think, “Shit. The last 12 years just flashed by.” There’s an honesty and a truth to it. The style of me writing has developed considerably since the first record, but the bluntness of that line—and perhaps some other lyrics on this album—reminds me of the way I wrote in the beginning.</p>
+  </div>
+  <div class="column" style="background-color:#EC5408;">
+    <h2>One Point Perspective</h2>
+    <p>On this track, you sing, “I’ve played to quiet rooms like this before,” which seems to fit with the scene that you’re setting—maybe this is a residency that’s lost its luster. At the same time, when I think about you guys playing some of these relatively strange and subdued new songs live…
+      I don’t write from a place of motivation. It happens more unexpectedly, as if something in my brain has finally convinced my body to let it come out. But what has motivated me to share the songs is that they might be meaningful beyond me, and I no longer need to hold on to them so hard. I’ve been thinking about hymns a lot and how you often don’t know who wrote them, but they’ve been sung repeatedly for hundreds of years. I’m not saying that I want or expect my songs to be like that, but I like the idea of songs not needing a writer.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="column" style="background-color:#ed6520;">
+    <h2>American Sports</h2>
+    <p>The album takes a bit of a dark turn on this song, and part of it is due to the sinister tone of your voice.
+      That vocal was done close to the beginning of recording that track at home. I feel like there’s an opportunity to capture something when you’re not even sure you’ve completely written it yet. I tried to replace the vocals later but I couldn’t do the thing that we liked about it anymore, so we left it the way it was. It’s probably not the most well-recorded thing.</p>
+  </div>
+  <div class="column" style="background-color:#f18752">
+    <h2>Science Fiction </h2>
+    <p>There’s a meta thing happening in this song, where you sing about writing songs…
+      … as we roll our eyes.
+      
+      I enjoyed it! The song is something of an ode to sci-fi, what is it about that genre that appeals to you?
+      Science fiction creates these other worlds within which we can explore our own, and I wanted to write something about that idea. So, through reading sci-fi books and watching films like Fassbinder’s World on a Wire, I began to access that sort of vocabulary—then suddenly we’re talking about virtual reality moon casino experiences.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="column" style="background-color:#bc4306;">
+    <h2>She Looks Like Fun</h2>
+    <p>This track seems to take place in the realm of social media, and the random words in the chorus—“Good morning/Cheeseburger/Snowboarding”—are akin to scrolling through Instagram.
+      It’s about the characters that people create in that virtual world. As far as the “cheeseburger” line, I was actually watching an episode of the show “High Maintenance,” and there’s a part where the person’s taking their picture with a cheeseburger and posting it and all this. That part in the song also reminds me of when you’re reading a book and trying to get into it, but you can’t stop from looking at your phone. I might have been doing a bit of that when I was writing the song.</p>
+  </div>
+  <div class="column" style="background-color:#a53a05;">
+    <h2>The World'd First Ever Monster Truck</h2>
+    <p>You’ve always seemed wary of being seen as a ponderous songwriter, but this album—and especially the lyrics—seems very properly thought out, in an engrossing way. Do you feel more comfortable in that role of a songwriter now?  
+      Certainly more so than when I was 18. There was something wrapped up in that word that used to make me uncomfortable, but I’m marginally more comfortable with it now.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="column" style="background-color:#ef7639;">
+    <h2>The Ultracheese</h2>
+    <p>On this track, you sing, “I launch my fragrance called Integrity/I sell the fact that I can’t be bought.” I looked it up, and there actually is a fragrance called Integrity now.
+      Oh, shit. I’m sure I checked when I wrote that, and it didn’t exist yet. So I’m probably going to get in trouble then, huh? With something like that, I can’t sit here and tell you I wanted to make some comment about integrity and my relationship to it, and then make a fucking perfume out of it and write a smart-ass line like that. It’s more like I see the shape of the letters of “integrity” on the perfume bottle in my mind’s eye—once you know what that font looks like, then it writes itself after that.</p>
+    </div>
+    <div class="column" style="background-color:
+    #d44b07;">
+      <h2>Tranquility Base Hotel and Casino </h2>
+      <p>You poke fun at the sterility of our modern world here with a line like, “Technological advances really bloody get me in the mood.” Do you think there’s anything sexy about technology?
+        Wow. [long pause] I’m going to have to get back to you there. I suppose not.
+        
+        There are a few small references to politics scattered throughout the record, including on this song. But as you were writing this album in 2016, were you ever tempted to make something more overtly political?
+        Well, when you suggest the idea of doing something political, I immediately think of the Windsor knot that you have to tie your tie in for a press conference; I get lost in that imagery. Though that might not be the knot anymore, even. If we’re really going to move things forward we’ve got to change the knot—we could run on that.
+        
+        As far as making something more political, I think the truthful answer is I don’t know. But more of those ideas have certainly found a way into this record than anything I’ve done before.</p>
+    </div>
+    </div>
+</div>
+<div class="column" style="background-color:#f3986a;">
+  <h2>Four out of Five </h2>
+  <p>This track has a sci-fi bent. It’s about a taqueria on the moon that’s called the Information Action Ratio, which is a reference to the idea of how we have so much knowledge at our fingertips but don’t quite know what to do with it.
+    Yeah. I lifted it from this book called Amusing Ourselves to Death. I was attracted to the idea as soon as I heard that phrase; even though it was in this book from [1985] it still seemed relevant—more relevant than it probably was when the guy made it up. I sang it into the tape recorder when I was making stuff up one day, and it ended up falling in a place where the implication was it was the name of this taco shop on the roof of this hotel complex.</p>
+</div>
+</div>
+<script>
+
+
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
